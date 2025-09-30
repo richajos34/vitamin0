@@ -5,6 +5,7 @@ export default function Home() {
     < main className =" min -h - screen flex items - center justify - center bg - gray-100" >
       <h1 className =" text -3 xl font - bold text - purple -600" >
         Ryan is very excited to learn in WDB bootcamp!
+        Yay
       </h1 >
     </ main >
   );
