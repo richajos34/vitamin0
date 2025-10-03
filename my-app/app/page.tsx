@@ -1,11 +1,22 @@
-// pages / index . tsx
+// pages / index.tsx
+"use client";
+
+import { useState } from "react";
 
 export default function Home() {
+  const [message, setMessage] = useState("Vitamin 1!");
+  const toggleMessage = () => {
+    setMessage(prev => prev === " Hello World " ? " You clicked me !" : " Hello World") ;
+  };
+
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold text-purple-600" >
-        This is for Vitamin 0!
-      </h1>
-    </main>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <h1
+        className=" text-4xl font-bold text-blue-600 cursor-pointer "
+        onClick={toggleMessage}
+      >
+        {message}
+      </h1 >
+    </ div >
   );
 }
