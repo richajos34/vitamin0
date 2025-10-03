@@ -9,7 +9,9 @@ export default function Home() {
         This is for Vitamin 0! Hi Kelly
         hi this is sophie yayay
         Sadhika is very exicted to learn in WDB bootcamp!
-      </h1>
-    </main>
+        Ryan is very excited to learn in WDB bootcamp!
+        Yay
+      </h1 >
+    </ main >
   );
 }
