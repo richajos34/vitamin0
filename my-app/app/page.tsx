@@ -1,11 +1,22 @@
-// pages / index . tsx
+// pages/index.tsx
+"use client";
+import { useState } from "react";
 
 export default function Home() {
+  const [message, setMessage] = useState("Hello World");
+
+  const toggleMessage = () => {
+    setMessage(prev => prev === "Hello World" ? "This website actually works!!!! v3" : "Hello World");
+  };
+
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold text-purple-600" >
-        Crystal is excited for WDB Bootcamp!!
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <h1
+        className="text-4xl font-bold text-blue-600 cursor-pointer"
+        onClick={toggleMessage}
+      >
+        {message}
       </h1>
-    </main>
+    </div>
   );
 }
