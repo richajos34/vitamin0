@@ -9,14 +9,14 @@ export default function Home()
 
   const toggleMessage = () =>
   {
-    setMessage(prev => prev === "Click me!" ? "I didn't say simon says..." : "Click me!");
+    setMessage(prev => prev === "Click me!" ? "Clicked!" : "Click me!");
   };
 
   return (
     < div className =" min -h - screen bg - gray -100 flex items - center justify - center
       ">
         <h1
-          className =" text -4 xl font - bold text - blue -600 cursor - pointer "
+          className =" text -4 lg font - bold text - blue -400 cursor - pointer "
           onClick ={ toggleMessage }
         >
           { message }
