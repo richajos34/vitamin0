@@ -3,24 +3,30 @@
 
 import { useState } from "react";
 
-export default function Home()
-{
-  const [message, setMessage] = useState("Click me!");
+export default function Home() {
+  const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ];
 
-  const toggleMessage = () =>
-  {
-    setMessage(prev => prev === "Click me!" ? "Clicked!" : "Click me!");
+
+  const [index, setIndex] = useState(0);
+
+  const handleClick = () => {
+    setIndex((prev) => (prev + 1) % days.length);
   };
 
   return (
-    < div className =" min -h - screen bg - gray -100 flex items - center justify - center
-      ">
-        <h1
-          className =" text -4 lg font - bold text - blue -400 cursor - pointer "
-          onClick ={ toggleMessage }
-        >
-          { message }
-        </h1 >
-      </ div >
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 flex items-center justify-center">
+      <h1
+        className="text-4xl font-bold text-blue-600 cursor-pointer transition-transform duration-300 hover:scale-110 select-none"
+        onClick={handleClick}
+      >
+        {days[index]}
+      </h1>
+    </div>
   );
 }
